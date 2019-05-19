@@ -3,8 +3,10 @@ cmake_minimum_required(VERSION 3.1)
 project(Intro2Alg LANGUAGES C CXX VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 11)
-set(BREW_INCLUDE_DIRS /Users/pyy/brew/include)
-set(BREW_LIBRARIES /Users/pyy/brew/lib)
+# set(BREW_INCLUDE_DIRS /Users/pyy/brew/include)
+# set(BREW_LIBRARIES /Users/pyy/brew/lib)
+set(BREW_INCLUDE_DIRS /usr/local/include)
+set(BREW_LIBRARIES /usr/local/lib)
 
 message(${BREW_INCLUDE_DIRS})
 
@@ -20,7 +22,7 @@ target_include_directories(alg PUBLIC
     # ${BREW_INCLUDE_DIRS}
 )
 target_link_libraries(alg PUBLIC 
-    ${BREW_LIBRARIES}/libglog.dylib
+    ${BREW_LIBRARIES}/libglog.so
 )
 
 enable_testing()
